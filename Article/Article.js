@@ -138,4 +138,9 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
   articleExpand.classList.add('expandButton');
 
   //set text content
+  articleTitle.textContent = title;
+  articleDate.textContent = date;
+  articleFirstParagraph.textContent = firstParagraph;
+  articleSecondParagraph.textContent = secondParagraph;
+  articleThirdParagraph.textContent = thirdParagraph;
 }
