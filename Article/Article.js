@@ -160,7 +160,7 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
   article.append(articleExpand);
 
   //add classes to elements
-  article.classList.add('article');
+  article.classList.add('article', 'close');
   articleTitle.classList.add('h2');
   articleDate.classList.add('date');
   articleExpand.classList.add('expandButton');
@@ -171,6 +171,7 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
   articleFirstParagraph.textContent = firstParagraph;
   articleSecondParagraph.textContent = secondParagraph;
   articleThirdParagraph.textContent = thirdParagraph;
+  articleExpand.textContent = 'Read more/Read less';
 
   articleExpand.addEventListener('click', event => {
     console.log('button clicked', event.target);
