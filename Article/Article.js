@@ -143,4 +143,16 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
   articleFirstParagraph.textContent = firstParagraph;
   articleSecondParagraph.textContent = secondParagraph;
   articleThirdParagraph.textContent = thirdParagraph;
+
+  articleExpand.addEventListener('click', event => {
+    console.log('button clicked', event.target);
+    article.classList.toggle('article-open');
+  })
+  return article;
 }
+
+const articles = document.querySelector('.articles');
+
+data.forEach(data => {
+  articles.append(createArticle(data.title, data.date, data.firstParagraph, data.secondParagraph, data.thirdParagraph));
+})
